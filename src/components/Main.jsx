@@ -13,14 +13,14 @@ export class Main extends Component {
     const newPrice = event.target.value;
     this.setState({ price: newPrice });
   }
-  handleMoveProgress(event){
+  handleMoveProgress(event) {
     event.preventDefault();
-    let width=0;
-    const interval =setInterval(Progress(),10);
-    function Progress(){
-      if(width===100){
-        clearInterval(interval)
-      }else{
+    let width = 0;
+    const interval = setInterval(Progress(), 10);
+    function Progress() {
+      if (width === 100) {
+        clearInterval(interval);
+      } else {
         width++;
         // props.elem.style.width = width + '%';
       }
@@ -42,7 +42,7 @@ export class Main extends Component {
             have already supported this project. Every dollar helps.
           </p>
         </article>
-        <form onSubmit={(event)=>this.handleMoveProgress(event)}>
+        <form onSubmit={(event) => this.handleMoveProgress(event)}>
           <div className="price-field">
             <label htmlFor="price" className="label-price">
               $
