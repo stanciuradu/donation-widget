@@ -4,6 +4,7 @@
 }
 .main .paragraf-main {
   color: red;
+  margin-left: 3rem;
 }
 .main .span-main {
   color: grey;
@@ -11,6 +12,7 @@
 .main .article-main {
   margin-top: 2rem;
   color: grey;
+  margin-left: 3rem;
 }
 .main .span-second {
   font-weight: bold;
