@@ -1,0 +1,19 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 2rem;
+    align-items: center;
+  }
+}
+.footer button {
+  width: 10rem;
+  height: 2.5rem;
+  color: grey;
+  font-weight: bold;
+}
