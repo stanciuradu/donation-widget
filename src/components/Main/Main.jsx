@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "../components/Main.css";
+import "../../components/Main/Main.css";
 
 export class Main extends Component {
   constructor() {
