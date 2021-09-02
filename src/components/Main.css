@@ -1,6 +1,6 @@
 .main {
-  border: 2px solid black;
-  margin-top: 2rem;
+  border: 1px solid black;
+  margin-top: 1.5rem;
 }
 .main .paragraf-main {
   color: red;
@@ -10,7 +10,7 @@
   color: grey;
 }
 .main .article-main {
-  margin-top: 2rem;
+  margin-top: 1rem;
   color: grey;
   margin-left: 3rem;
 }
@@ -21,6 +21,7 @@
   font-weight: bold;
   position: absolute;
   margin-top: 1rem;
+  color: grey;
 }
 .main form {
   display: flex;
@@ -52,12 +53,13 @@
   background-color: red;
 }
 .main .price-field .question-form {
-  color: blue;
+  color: hsl(214, 100%, 50%);
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
   margin-right: 2rem;
   margin-bottom: 2rem;
+  margin-top: 0.5rem;
 }
 .main .progress-price {
   width: 100%;

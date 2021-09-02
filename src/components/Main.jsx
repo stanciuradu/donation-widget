@@ -34,7 +34,7 @@ export class Main extends Component {
         </div>
         <p className="paragraf-main">
           Only 3 days left{" "}
-          <span className="span-main">to fund this project</span>
+          <span className="span-main">to fund this project.</span>
         </p>
         <article className="article-main">
           <p>

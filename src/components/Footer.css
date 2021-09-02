@@ -16,6 +16,7 @@
   height: 2.5rem;
   color: grey;
   font-weight: bold;
+  cursor: pointer;
 }
 @media (max-width: 768px) {
   .footer button {
