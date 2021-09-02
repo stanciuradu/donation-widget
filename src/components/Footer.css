@@ -17,3 +17,8 @@
   color: grey;
   font-weight: bold;
 }
+@media (max-width: 768px) {
+  .footer button {
+    margin-bottom: 2rem;
+  }
+}

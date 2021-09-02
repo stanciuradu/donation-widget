@@ -18,10 +18,18 @@
 .main form .label-price {
   font-weight: bold;
   position: absolute;
+  margin-top: 1rem;
 }
 .main form {
   display: flex;
   justify-content: space-around;
+}
+@media (max-width: 768px) {
+  .main form {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 .main form input {
   width: 8rem;
