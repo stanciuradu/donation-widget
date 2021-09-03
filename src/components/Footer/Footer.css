@@ -1,17 +1,19 @@
-.footer {
+.footer .footer-button {
   display: flex;
   justify-content: space-between;
   margin-top: 2rem;
+  margin-bottom: 0.5rem;
 }
+
 @media (max-width: 768px) {
-  .footer {
+  .footer .footer-button {
     flex-direction: column;
     justify-content: center;
     margin-bottom: 2rem;
     align-items: center;
   }
 }
-.footer button {
+.footer .footer-button button {
   width: 10rem;
   height: 2.5rem;
   color: grey;
@@ -19,7 +21,13 @@
   cursor: pointer;
 }
 @media (max-width: 768px) {
-  .footer button {
+  .footer .footer-button button {
     margin-bottom: 2rem;
   }
+}
+.footer .donation-display .donation-save {
+  font-size: 1rem;
+  color: red;
+  font-weight: bold;
+  border: 1px double black;
 }
