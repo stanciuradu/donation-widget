@@ -14,14 +14,15 @@ export class Main extends Component {
     this.setState({ price: newPrice });
   }
   handleMoveProgress(event) {
+    // prevenirea compoetamentului default a formularului
     event.preventDefault();
-    let width = 0;
+    let price = 0;
     const interval = setInterval(Progress(), 10);
     function Progress() {
-      if (width === 100) {
+      if (price === 0) {
         clearInterval(interval);
       } else {
-        width++;
+        price++;
         // props.elem.style.width = width + '%';
       }
     }
