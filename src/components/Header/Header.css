@@ -9,13 +9,14 @@
 .header {
   display: flex;
   justify-content: center;
+  flex-direction: column;
 }
 .container-header .price-container {
   font-weight: bold;
 }
-.container-header h1{
+.container-header h1 {
   text-align: center;
 }
-.container-header .container-header-span{
+.container-header .container-header-span {
   font-size: 1rem;
 }
