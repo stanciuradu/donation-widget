@@ -16,16 +16,16 @@ export class Main extends Component {
   handleMoveProgress(event) {
     // prevenirea compoetamentului default a formularului
     event.preventDefault();
-    let price = 0;
-    const interval = setInterval(Progress(), 10);
-    function Progress() {
-      if (price === 0) {
-        clearInterval(interval);
-      } else {
-        price++;
-        // props.elem.style.width = width + '%';
-      }
-    }
+    // let price = 0;
+    // const interval = setInterval(Progress(), 10);
+    // function Progress() {
+    //   if (price === 0) {
+    //     clearInterval(interval);
+    //   } else {
+    //     price++;
+    //     // props.elem.style.width = width + '%';
+    //   }
+    // }
   }
   render() {
     return (
