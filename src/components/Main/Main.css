@@ -2,26 +2,28 @@
   border: 1px solid black;
   margin-top: 0.3rem;
 }
-.main .paragraf-main {
+.main .content-main .paragraf-main {
   color: red;
   margin-left: 2rem;
 }
-.main .span-main {
+.main .content-main .span-main {
   color: grey;
 }
-.main .article-main {
+.main .content-main .article-main {
   margin-top: 1rem;
   color: grey;
   margin-left: 2rem;
 }
-.main .span-second {
+.main .content-main .span-second {
   font-weight: bold;
 }
-.main form .label-price {
-  font-weight: bold;
-  position: absolute;
-  margin-top: 1rem;
-  color: grey;
+@media (max-width: 768px) {
+  .main .content-main {
+    text-align: center;
+  }
+}
+.main form .price-field {
+  transition: all 0.3s;
 }
 .main form {
   display: flex;
@@ -39,7 +41,22 @@
   height: 3rem;
   border: 2px solid grey;
   border-radius: 1px;
+  box-shadow: none;
+  border-radius: 0px;
+  transition: all 0.5s;
 }
+.main .price-field input::placeholder {
+  color: grey;
+  font-size: 1rem;
+}
+.main .price-field input:focus {
+  box-shadow: none;
+  outline: none;
+}
+.main .price-field input:focus-within {
+  transform: scale(1.05, 1.05);
+}
+
 .main .button-form {
   background-color: rgb(28, 194, 56);
   color: white;

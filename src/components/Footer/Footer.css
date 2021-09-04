@@ -31,3 +31,8 @@
   font-weight: bold;
   border: 1px double black;
 }
+@media (max-width: 768px) {
+  .footer .donation-display {
+    text-align: center;
+  }
+}

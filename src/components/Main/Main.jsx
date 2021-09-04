@@ -35,27 +35,27 @@ export class Main extends Component {
           {/* pasez state-ul initial ca props, pentru a fi ulterior preluate */}
           <BarProgress percentage={this.state.percentage}></BarProgress>
         </ProgressPriceContainer>
-        <p className="paragraf-main">
-          Only 3 days left{" "}
-          <span className="span-main">to fund this project.</span>
-        </p>
-        <article className="article-main">
-          <p>
-            Join the <span className="span-second">42</span> other donors who
-            have already supported this project. Every dollar helps.
+        <div className="content-main">
+          <p className="paragraf-main">
+            Only 3 days left{" "}
+            <span className="span-main">to fund this project.</span>
           </p>
-        </article>
+          <article className="article-main">
+            <p>
+              Join the <span className="span-second">42</span> other donors who
+              have already supported this project. Every dollar helps.
+            </p>
+          </article>
+        </div>
         <form onSubmit={(event) => this.handleUpdateProgress(event)}>
           <div className="price-field">
-            <label htmlFor="price" className="label-price">
-              {/* $ */}
-            </label>
             <input
               type="text"
               name="price"
               id="price"
               onChange={(event) => this.handleUpdatePrice(event)}
               value={this.state.price}
+              placeholder="$"
             />
             <em className="question-form">Why give $50?</em>
           </div>
