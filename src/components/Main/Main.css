@@ -61,15 +61,3 @@
   margin-bottom: 2rem;
   margin-top: 0.5rem;
 }
-.main .progress-price {
-  width: 100%;
-  height: 20px;
-  position: relative;
-  background-color: #ddd;
-}
-.main .bar-progress {
-  background-color: red;
-  width: 10px;
-  height: 20px;
-  position: absolute;
-}

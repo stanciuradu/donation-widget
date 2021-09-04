@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "../../components/Main/Main.css";
+import { ProgressPriceContainer, BarProgress } from "./ProgressBarStyles";
 
 export class Main extends Component {
   constructor() {
@@ -7,32 +8,34 @@ export class Main extends Component {
     this.state = {
       // initial, campul pentru introducerea pretului este necompletat, el este gol
       price: "",
+      // initial procentele de progres sunt 0
+      percentage: 0,
     };
   }
   handleUpdatePrice(event) {
     const newPrice = event.target.value;
     this.setState({ price: newPrice });
   }
-  handleMoveProgress(event) {
+  handleUpdateProgress(event) {
     // prevenirea compoetamentului default a formularului
     event.preventDefault();
-    // let price = 0;
-    // const interval = setInterval(Progress(), 10);
-    // function Progress() {
-    //   if (price === 0) {
-    //     clearInterval(interval);
-    //   } else {
-    //     price++;
-    //     // props.elem.style.width = width + '%';
-    //   }
-    // }
+    // resetarea state-ului initial al barei de progres cu 10 procente la submiterea fomularului
+    if (this.state.price === 0) {
+      return this.state.percentage === 0;
+    } else if (this.state.price !== 0) {
+      this.setState({
+        // am folosit biblioteca Math.cbrt->deoarce m-am gandit ca rata de progres sa creasca exponential cu pretul introdus de utilizator
+        percentage: this.state.percentage + Math.cbrt(this.state.price),
+      });
+    }
   }
   render() {
     return (
       <div className="main">
-        <div className="progress-price">
-          <div className="bar-progress"></div>
-        </div>
+        <ProgressPriceContainer>
+          {/* pasez state-ul initial ca props, pentru a fi ulterior preluate */}
+          <BarProgress percentage={this.state.percentage}></BarProgress>
+        </ProgressPriceContainer>
         <p className="paragraf-main">
           Only 3 days left{" "}
           <span className="span-main">to fund this project.</span>
@@ -43,10 +46,10 @@ export class Main extends Component {
             have already supported this project. Every dollar helps.
           </p>
         </article>
-        <form onSubmit={(event) => this.handleMoveProgress(event)}>
+        <form onSubmit={(event) => this.handleUpdateProgress(event)}>
           <div className="price-field">
             <label htmlFor="price" className="label-price">
-              $
+              {/* $ */}
             </label>
             <input
               type="text"
