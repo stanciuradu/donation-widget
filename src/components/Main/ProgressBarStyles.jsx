@@ -1,6 +1,6 @@
 import styled from "styled-components";
 export const ProgressPriceContainer = styled.div`
-  width: 450px;
+  width: 400px;
   height: 20px;
   position: relative;
   background-color: #b1b0b0;
