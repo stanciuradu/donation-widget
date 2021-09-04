@@ -19,7 +19,6 @@ export class Main extends Component {
   handleUpdateProgress(event) {
     // prevenirea compoetamentului default a formularului
     event.preventDefault();
-    // resetarea state-ului initial al barei de progres cu 10 procente la submiterea fomularului
     if (this.state.price === 0) {
       return this.state.percentage === 0;
     } else if (this.state.price !== 0) {
