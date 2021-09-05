@@ -11,6 +11,7 @@ export class Main extends Component {
       price: "",
       // initial procentele de progres sunt 0
       percentage: 0,
+      // suma totala initială este 167$
       totalPrice: 167,
     };
   }
@@ -33,10 +34,10 @@ export class Main extends Component {
   render() {
     return (
       <div className="main">
-        {/* pasez pretul total ca props catre componenenta de Header */}
+        {/* pasez pretul total ca props catre componenta Header */}
         <Header totalPrice={this.state.totalPrice} />
         <ProgressPriceContainer>
-          {/* pasez state-ul initial ca props, pentru a fi ulterior preluate */}
+          {/* pasez state-ul initial ca props */}
           <BarProgress percentage={this.state.percentage}></BarProgress>
         </ProgressPriceContainer>
         <div className="content-main">

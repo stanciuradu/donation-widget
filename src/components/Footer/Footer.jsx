@@ -21,7 +21,7 @@ export class Footer extends Component {
         </div>
         <div className="donation-display">
           {this.state.isDonationDisplay ? (
-            <em className="donation-save">Your donation is save</em>
+            <em className="donation-save">Your donation is save!</em>
           ) : null}
         </div>
       </div>
