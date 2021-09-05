@@ -19,14 +19,14 @@ export class Main extends Component {
     this.setState({ price: newPrice });
   }
   handleUpdateProgress(event) {
-    // prevenirea compoetamentului default a formularului
+    // prevenirea comportamentului default a formularului
     event.preventDefault();
     if (this.state.price === 0) {
       return this.state.percentage === 0;
     } else if (this.state.price !== 0) {
       this.setState({
         // am folosit biblioteca Math.cbrt->deoarce m-am gandit ca rata de progres sa creasca exponential cu pretul introdus de utilizator
-        percentage: this.state.percentage + Math.cbrt(this.state.price),
+        percentage: this.state.percentage,
         totalPrice: this.state.totalPrice - Number(this.state.price),
       });
     }
