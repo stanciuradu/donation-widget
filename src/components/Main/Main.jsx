@@ -27,7 +27,7 @@ export class Main extends Component {
       this.setState({
         // am folosit biblioteca Math.cbrt->deoarce m-am gandit ca rata de progres sa creasca exponential cu pretul introdus de utilizator
         percentage: this.state.percentage + Math.cbrt(this.state.price),
-        totalPrice: Number(this.state.totalPrice) - Number(this.state.price),
+        totalPrice: this.state.totalPrice - Number(this.state.price),
       });
     }
   }
