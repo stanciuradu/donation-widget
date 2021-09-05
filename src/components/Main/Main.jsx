@@ -25,8 +25,7 @@ export class Main extends Component {
       return this.state.percentage === 0;
     } else if (this.state.price !== 0) {
       this.setState({
-        // am folosit biblioteca Math.cbrt->deoarce m-am gandit ca rata de progres sa creasca exponential cu pretul introdus de utilizator
-        percentage: this.state.percentage,
+        percentage: this.state.percentage + this.state.price,
         totalPrice: this.state.totalPrice - Number(this.state.price),
       });
     }
