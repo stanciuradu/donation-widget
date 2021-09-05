@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "../../components/Main/Main.css";
 import { ProgressPriceContainer, BarProgress } from "./ProgressBarStyles";
+import Header from "../Header/Header";
 
 export class Main extends Component {
   constructor() {
@@ -10,6 +11,7 @@ export class Main extends Component {
       price: "",
       // initial procentele de progres sunt 0
       percentage: 0,
+      totalPrice: 167,
     };
   }
   handleUpdatePrice(event) {
@@ -25,12 +27,15 @@ export class Main extends Component {
       this.setState({
         // am folosit biblioteca Math.cbrt->deoarce m-am gandit ca rata de progres sa creasca exponential cu pretul introdus de utilizator
         percentage: this.state.percentage + Math.cbrt(this.state.price),
+        totalPrice: Number(this.state.totalPrice) - Number(this.state.price),
       });
     }
   }
   render() {
     return (
       <div className="main">
+        {/* pasez pretul total ca props catre componenenta de Header */}
+        <Header totalPrice={this.state.totalPrice} />
         <ProgressPriceContainer>
           {/* pasez state-ul initial ca props, pentru a fi ulterior preluate */}
           <BarProgress percentage={this.state.percentage}></BarProgress>
