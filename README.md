@@ -6,7 +6,8 @@
 ->click pe butonul Save for later->se afisează mesajul "Your donation is save" user-ului
 #
 ->la submiterea formularului se resetează inputul pentru introducerea unei alte sume de donatie de către user
-#Link către aplicație:https://donation-box-model.netlify.app/
+#
+Link către aplicație:https://donation-box-model.netlify.app/
 
 
 
