@@ -13,6 +13,7 @@ export class Main extends Component {
       percentage: 0,
       // suma totala initială este 167$
       totalPrice: 167,
+      maxProgressBar: 167,
     };
   }
   // se actualizeaza state-ul inputului
@@ -26,9 +27,12 @@ export class Main extends Component {
     event.preventDefault();
     if (this.state.price === 0) {
       return this.state.percentage === 0;
-    } else if (this.state.price > 0) {
+    } else if (
+      this.state.price > 0 &&
+      this.state.maxProgressBar >= this.state.price
+    ) {
       this.setState({
-        percentage: this.state.percentage + this.state.price,
+        percentage: this.state.percentage + this.state.price / 1.67,
         totalPrice: this.state.totalPrice - Number(this.state.price),
       });
     }
