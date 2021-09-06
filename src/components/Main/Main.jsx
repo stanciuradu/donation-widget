@@ -24,7 +24,7 @@ export class Main extends Component {
     event.preventDefault();
     if (this.state.price === 0) {
       return this.state.percentage === 0;
-    } else if (this.state.price !== 0) {
+    } else if (this.state.price > 0) {
       this.setState({
         percentage: this.state.percentage + this.state.price,
         totalPrice: this.state.totalPrice - Number(this.state.price),
