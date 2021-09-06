@@ -15,10 +15,12 @@ export class Main extends Component {
       totalPrice: 167,
     };
   }
+  // se actualizeaza state-ul inputului
   handleUpdatePrice(event) {
     const newPrice = event.target.value;
     this.setState({ price: newPrice });
   }
+  // ->functie pentru submiterea formularului si cresterea progresului din componenta BarProgress
   handleUpdateProgress(event) {
     // prevenirea comportamentului default a formularului
     event.preventDefault();
