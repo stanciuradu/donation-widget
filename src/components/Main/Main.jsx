@@ -30,6 +30,10 @@ export class Main extends Component {
         totalPrice: this.state.totalPrice - Number(this.state.price),
       });
     }
+    // resetarea input-ului la valorea initiala dupa submiterea formularului
+    this.setState({
+      price: "",
+    });
   }
   render() {
     return (
